@@ -1,0 +1,149 @@
+/* Contact Styles */
+
+.contact {
+  position: relative;
+  object-fit: cover;
+  margin-top: 96px;
+  background: url("../../../assets/images/contact-bg.png") no-repeat center;
+  background-size: cover;
+  height: 850px;
+}
+
+.contact__box {
+  position: absolute;
+  left: 0;
+  background-color: #9fedea1d;
+  backdrop-filter: blur(15px);
+  width: 48%;
+  height: 850px;
+  padding: 144px 72px;
+}
+
+.box__title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #9fedea;
+  margin-bottom: 48px;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 2px solid #eceff0;
+  outline: none;
+  font-size: 24px;
+  padding: 15px 0;
+  width: 100%;
+  background-color: transparent;
+  transition: border-color 0.3s;
+  color: #eceff0;
+}
+
+.form__input::placeholder {
+  color: #eceff0;
+}
+
+.form__input:focus {
+  border-color: #11998e;
+}
+
+.form__label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 24px;
+  color: #eceff0;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.form__label:focus {
+  color: transparent;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+  top: -17px;
+  font-size: 18px;
+  color: #11998e;
+}
+
+.form__text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #eceff0;
+  margin-bottom: 32px;
+}
+
+.form-arrow {
+  position: relative;
+}
+
+.forms::after {
+  background: url('../../../assets/lib/form-arrow.svg') no-repeat center;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  top: 85px;
+  margin-left: 10px;
+}
+
+.dropdown__btn {
+  padding: 16px 55px 16px 32px;
+  /* width: 100%; */
+  display: inline-block;
+  appearance: none;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.dropdown__btn-list {
+  color: #f6f6f6;
+  backdrop-filter: blur(55px);
+  position: absolute;
+  background-color: #1a1919bd;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown__btn-list-active {
+  display: block;
+}
+
+.dropdown__btn-item {
+  padding: 16px 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown__btn-item:hover {
+  background-color: rgba(127, 255, 212, 0.644);
+}
+
+.form__submit {
+  text-align: center;
+  width: 100%;
+  margin-top: 72px;
+  padding: 24px 0;
+  outline: none;
+  border: none;
+  background-color: #9fedea;
+  font-weight: 600;
+  font-size: 32px;
+  color: #141414;
+}
+
+.last-line {
+  width: 1300px;
+  max-width: 100%;
+  margin: 96px auto 53px;
+}

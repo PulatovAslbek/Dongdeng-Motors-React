@@ -1,0 +1,47 @@
+/* Header Styles */
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__items {
+  margin-left: 32px;
+}
+
+.items__link {
+  color: #dcdcdc;
+}
+
+.header__break--line {
+  width: 1300px;
+  margin: 18px auto 0;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #dcdcdc;
+  margin: 4px 0;
+}
+
+.close-button {
+  display: none;
+  font-size: 20px;
+  color: #dcdcdc;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,0 +1,40 @@
+/* footer Styles */
+
+.footer__logo-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.footer__link-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+
+.footer__logo--text {
+  color: #eceff0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  margin-left: 16px;
+}
+
+.footer__item {
+  margin-top: 24px;
+}
+
+.list__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #eceff0;
+  margin-bottom: 32px;
+}
+
+.footer__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #dcdcdc;
+}

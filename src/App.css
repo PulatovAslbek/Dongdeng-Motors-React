@@ -1,0 +1,65 @@
+/* montserrat-400 -*/
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/assets/fonts/montserrat-v25-latin-regular.woff2")
+    format("woff2");
+}
+/* montserrat-500 -*/
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/src/assets/fonts/montserrat-v25-latin-500.woff2") format("woff2");
+}
+/* montserrat-600 -*/
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/src/assets/fonts/montserrat-v25-latin-600.woff2") format("woff2");
+}
+
+.container {
+  max-width: 100%;
+  width: 1156px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+}
+
+/* List Styles */
+ul {
+  list-style-type: none;
+}
+
+/* Heading and Paragraph Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+

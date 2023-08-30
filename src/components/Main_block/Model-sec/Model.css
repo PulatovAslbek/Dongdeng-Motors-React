@@ -1,0 +1,126 @@
+/* Modal Tabs Styles */
+.model-tabs {
+  position: relative;
+  margin-bottom: 102px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.modal-tabs__box {
+  position: relative;
+}
+
+.model-tabs__title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #eceff0;
+  margin-bottom: 49px;
+}
+
+.model-tabs__items {
+  color: #eceff0;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 32px;
+  margin-left: 40px;
+}
+
+.model-tabs__items-active {
+  font-weight: 600;
+}
+
+.model-tabs__items-active::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 32px;
+  background-color: #9fedea;
+  border-radius: 1px;
+  left: 5px;
+}
+
+.model-tabs__link {
+  position: relative;
+  top: 40px;
+  color: #9fedea;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.38px;
+}
+
+.resize2 {
+  display: none;
+}
+
+.model-tabs__link::after {
+  margin-left: 5px;
+  display: inline-block;
+  content: "";
+  background-image: url("../../../assets/lib/iconoir_arrow-tr.svg");
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+
+/* Model Content Styles */
+.model-content__img {
+  width: 612px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.model-content__text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-box__btn {
+  padding: 20px 60px;
+  background-color: #dcdcdc;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #090909;
+}
+
+.text-box__price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #9fedea;
+}
+
+/* Utility Classes */
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* Fade Animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Icon Styles */
+.icons {
+  display: none;
+}

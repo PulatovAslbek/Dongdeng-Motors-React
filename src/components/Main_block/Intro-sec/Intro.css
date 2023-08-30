@@ -1,0 +1,73 @@
+/* Main Intro Styles */
+.intro {
+  object-fit: cover;
+  margin: 96px 0;
+  background: url("../../../assets/images/showcase-img.png") no-repeat center;
+  height: 630px;
+  background-size: cover;
+}
+
+.intro__text--box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 267px 0 32px 0;
+}
+
+/* Title and Description Styles */
+.title--box__desc {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39.01px;
+  color: #9fedea;
+}
+
+.title--box__title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 78.02px;
+  color: #eceff0;
+}
+
+/* // .number__box {
+//   background-image: url("../../../assets/lib/") no-repeat center;
+//   background-size: cover;
+//   height: 159px;
+// } */
+
+/* Break Line Styles */
+.intro__break--line {
+  width: 1156px;
+  margin: 32px auto;
+}
+
+/* Intro Info Box Styles */
+.intro__info--box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info--box__title {
+  color: #9fedea;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.38px;
+}
+
+.info--box__title::after {
+  margin-left: 5px;
+  display: inline-block;
+  content: "";
+  background-image: url("../../../assets/lib/iconoir_arrow-tr.svg");
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+
+.info--box__price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #9fedea;
+}
