@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header_block/Header.jsx";
 import Intro from "./components/Main_block/Intro-sec/Intro";
 import Partners from "./components/Main_block/Partners-sec/Partners"
-import ModelTabs from "./components/Main_block/Model-sec/Model"
+import ModelTabsComponent from "./components/Main_block/Model-sec/Model"
 import AboutUsSection from "./components/Main_block/About-sec/About"
 import Faq from "./components/Main_block/Faq-sec/Faq"
 import {Contact, LastLine} from "./components/Main_block/Contact-sec/Contact"
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Intro />
       <Partners />
-      <ModelTabs />
+      <ModelTabsComponent />
       <AboutUsSection  />
       <Faq />
       <Contact />

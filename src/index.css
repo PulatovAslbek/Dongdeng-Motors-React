@@ -384,7 +384,7 @@ p {
 }
 
 /* Large screens */
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   .container {
     width: 100%;
     padding: 0 20px;

@@ -1,42 +1,56 @@
-import { React, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Model.css";
-import car1Image from "../../../assets/images/car1.png";
-import minivanImage from "../../../assets/images/minivan.jpg";
-import pickupImage from "../../../assets/images/pickup.jpg";
-import busImage from "../../../assets/images/dongfeng-coach-bus-2.jpg";
-import truckImage from "../../../assets/images/truck.jpg";
-import specialImage from "../../../assets/images/special.png";
 
-function ModelTabs() {
-  
+// -----------*ModelTab images*----------------------------------------------
+import car1 from "../../../assets/images/car1.png"
+import minivan from "../../../assets/images/minivan.jpg"
+import pickup from "../../../assets/images/pickup.jpg"
+import bus from "../../../assets/images/dongfeng-coach-bus-2.jpg"
+import truck from "../../../assets/images/truck.jpg"
+import special from "../../../assets/images/special.png"
+
+// -----------*images that replace text when it comes to phone size*----------------------------------------------------
+import minicar1 from "../../../assets/lib/mdi_car-suv.svg"
+import minivan2 from "../../../assets/lib/mdi_van-utility.svg"
+import minipickub3 from "../../../assets/lib/mdi_car-pickup.svg"
+import minibus4 from "../../../assets/lib/mdi_bus.svg"
+import minitruck5 from "../../../assets/lib/mdi_truck.svg"
+import ministar from "../../../assets/lib/mdi_folder-star.svg"
+
+
+
+const ModelComponent = () => {
   useEffect(() => {
     const modelItems = document.querySelectorAll(".model-tabs__items");
     const modelContents = document.querySelectorAll(".model-content");
     const mediaQuery = window.matchMedia("(max-width: 660px)");
 
-    function hideModelContent() {
-      modelContents.forEach((item) => item.classList.add("hide", "fade"));
-      modelItems.forEach((item) =>
-        item.classList.remove("model-tabs__items-active")
-      );
-    }
+    const hideModelContent = () => {
+      modelContents.forEach((item) => {
+        item.classList.add("hide", "fade");
+      });
+      modelItems.forEach((item) => {
+        item.classList.remove("model-tabs__items-active");
+      });
+    };
 
-    function showModelContent(index = 0) {
+    const showModelContent = (index = 0) => {
       modelContents[index].classList.add("show", "fade");
       modelContents[index].classList.remove("hide");
       modelItems[index].classList.add("model-tabs__items-active");
-    }
+    };
 
     hideModelContent();
     showModelContent();
-    modelItems.forEach((item, index) =>
+
+    modelItems.forEach((item, index) => {
       item.addEventListener("click", () => {
         hideModelContent();
         showModelContent(index);
-      })
-    );
+      });
+    });
 
-    function updateModelContent() {
+    const updateModelContent = () => {
       const attribute = mediaQuery.matches
         ? "data-image"
         : "data-original-text";
@@ -47,11 +61,11 @@ function ModelTabs() {
           ? `<img src="${content}" alt="${item.textContent}" />`
           : content;
       });
-    }
+    };
 
-    modelItems.forEach((item) =>
-      item.setAttribute("data-original-text", item.textContent)
-    );
+    modelItems.forEach((item) => {
+      item.setAttribute("data-original-text", item.textContent);
+    });
 
     mediaQuery.addEventListener("change", updateModelContent);
     updateModelContent();
@@ -63,37 +77,37 @@ function ModelTabs() {
         <h2 className="model-tabs__title">RECOMMENDED MODELS</h2>
         <ul className="model-tabs__list">
           <li
-            data-image="../../../assets/lib/mdi_car-suv.svg"
+            data-image={minicar1}
             className="model-tabs__items model-tabs__items-active"
           >
             Car & SUV
           </li>
           <li
-            data-image="../../../assets/lib/mdi_van-utility.svg"
+            data-image={minivan2}
             className="model-tabs__items"
           >
             Minivan & MPV
           </li>
           <li
-            data-image="../../../assets/lib/mdi_car-pickup.svg"
+            data-image={minipickub3}
             className="model-tabs__items"
           >
             Pickup & Offroad
           </li>
           <li
-            data-image="../../../assets/lib/mdi_bus.svg"
+            data-image={minibus4}
             className="model-tabs__items"
           >
             Bus
           </li>
           <li
-            data-image="../../../assets/lib/mdi_truck.svg"
+            data-image={minitruck5}
             className="model-tabs__items"
           >
             Truck
           </li>
           <li
-            data-image="../../../assets/lib/mdi_folder-star.svg"
+            data-image={ministar}
             className="model-tabs__items"
           >
             Special
@@ -105,7 +119,11 @@ function ModelTabs() {
       </div>
 
       <div className="model-content">
-        <img className="model-content__img" src={car1Image} alt="car1" />
+        <img
+          className="model-content__img"
+          src={car1}
+          alt="car1"
+        />
         <div className="model-content__text-box">
           <a href="#" className="text-box__btn">
             <small>L</small>60
@@ -116,53 +134,44 @@ function ModelTabs() {
           SHOW MORE
         </a>
       </div>
-      <div className="model-content">
-        <img className="model-content__img" src={minivanImage} alt="minivan" />
-        <div className="model-content__text-box">
-          <a href="#" className="text-box__btn">
-            <small>C</small>37
-          </a>
-          <p className="text-box__price">$30,586</p>
-        </div>
+      <div class="model-content">
+                <img class="model-content__img" src={minivan} alt="car2"/>
+                <div class="model-content__text-box">
+                    <a href="#" class="text-box__btn"><small>C</small>37</a>
+                    <p class="text-box__price">$30,586</p>
+                </div>
       </div>
-      <div className="model-content">
-        <img className="model-content__img" src={pickupImage} alt="pickup" />
-        <div className="model-content__text-box">
-          <a href="#" className="text-box__btn">
-            <small>Rich</small>6
-          </a>
-          <p className="text-box__price">$48,428</p>
-        </div>
+      <div class="model-content">
+                <img class="model-content__img" src={pickup} alt="car3"/>
+                <div class="model-content__text-box">
+                    <a href="#" class="text-box__btn"><small>Rich</small>6</a>
+                    <p class="text-box__price">$48,428</p>
+                </div>
       </div>
-      <div className="model-content">
-        <img className="model-content__img" src={busImage} alt="bus" />
-        <div className="model-content__text-box">
-          <a href="#" className="text-box__btn">
-            <small>S</small>32
-          </a>
-          <p className="text-box__price">$28,558</p>
-        </div>
+      <div class="model-content">
+                <img class="model-content__img" src={bus} alt="car4"/>
+                <div class="model-content__text-box">
+                    <a href="#" class="text-box__btn"><small>S</small>32</a>
+                    <p class="text-box__price">$28,558</p>
+                </div>
       </div>
-      <div className="model-content">
-        <img className="model-content__img" src={truckImage} alt="truck" />
-        <div className="model-content__text-box">
-          <a href="#" className="text-box__btn">
-            <small>KX</small>
-          </a>
-          <p className="text-box__price">$55,505</p>
-        </div>
+      <div class="model-content">
+                <img class="model-content__img" src={truck} alt="car5"/>
+                <div class="model-content__text-box">
+                    <a href="#" class="text-box__btn"><small>KX</small></a>
+                    <p class="text-box__price">$55,505</p>
+                </div>
       </div>
-      <div className="model-content">
-        <img className="model-content__img" src={specialImage} alt="special" />
-        <div className="model-content__text-box">
-          <a href="#" className="text-box__btn">
-            <small>LHD/RHD</small>
-          </a>
-          <p className="text-box__price">$42,752</p>
-        </div>
+      <div class="model-content">
+                <img class="model-content__img" src={special} alt="car6"/>
+                <div class="model-content__text-box">
+                    <a href="#" class="text-box__btn"><small>LHD/RHD</small></a>
+                    <p class="text-box__price">$42,752</p>
+                </div>
       </div>
+
     </section>
   );
-}
+};
 
-export default ModelTabs;
+export default ModelComponent;
